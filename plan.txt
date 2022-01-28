@@ -9,12 +9,15 @@
 [+] Git setup and first commit
 [+] Install laravel Mix    parcal js/gulp/Webpack if we are using wabpack so at that time we need to configure manual setting
     ..setup js and scss
-[.] install tailwind css
-[.]create home page using html and css 
+[+] install tailwind css
+[+]create home page using html and css 
     -include tailwind css
-create cart page
+[+]create cart page
     -order summery section
     -empty cart server
+[+]-move routes to routes files
+[+]-create dedicated controllers
+[.]-add to cart functionality
 create order controller and link it in server.js
 create orders view  with table  for cuastomer  and admin
 create order single page  with status
