@@ -21,7 +21,7 @@
     "sass-loader": "12.1.0"
   },
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": "0.25.0",
     "config": "3.3.6",
     "connect-mongo": "3.1.2",
     "dotenv": "^15.0.0",
@@ -30,6 +30,7 @@
     "express-ejs-layouts": "^2.5.1",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.2",
-    "mongoose": "^6.1.8"
+    "mongoose": "^6.1.8",
+    "noty": "^3.2.0-beta-deprecated"
   }
 }

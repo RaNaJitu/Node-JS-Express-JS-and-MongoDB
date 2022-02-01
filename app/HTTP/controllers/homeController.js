@@ -6,7 +6,7 @@ const homeController = ()=>{
     return{
         async index(req, res) {
             const pizza = await Menu.find();
-            console.log(pizza);   //!here we are use async and await it is cleaner to other method
+            //console.log(pizza);   //!here we are use async and await it is cleaner to other method
             return res.render('home', { pizzas : pizza});
         //     Menu.find().then(function(pizza){      //^here we are calling the Menu model
         //         console.log(pizza);

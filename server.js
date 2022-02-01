@@ -79,6 +79,14 @@ app.use(flash());
 //~# Assets
 app.use(express.static('Public'))
 
+app.use(express.json()) //^ enable the json data what ever data come in json form
+
+//~> Global Middleware
+app.use((req,res, next)=>{
+    res.locals.session = req.session   //! this for getting the session values
+    next();
+})
+
 //~^ set template engine
 app.use(expressLayout);
 app.set('views',path.join(__dirname) + '/resources/Views')

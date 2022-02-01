@@ -7,8 +7,9 @@ const initRoutes = (app)=> {
     //     res.render('home');
     // })
     app.get('/',homeController().index)
-    app.get('/cart',cartController().cart)
     app.get('/login',authController().login)
     app.get('/register',authController().register)  //? here we are doing call the controller 
+    app.get('/cart',cartController().cart) //# 1st parameter is routes and 2nd parameter is controller name
+    app.post('/update-cart',cartController().update);
 }
 module.exports = initRoutes
