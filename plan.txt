@@ -17,15 +17,33 @@
     -empty cart server
 [+]-move routes to routes files
 [+]-create dedicated controllers
-[.]-add to cart functionality
-create order controller and link it in server.js
-create orders view  with table  for cuastomer  and admin
-create order single page  with status
-create login page  with route
-create register  page with route
-create register crud
-    -dependancy express-flash express-session  cookies-parse dotenv 
+[+]-add to cart functionality
+     [+]Fetch all pizza from db and show on home page
+     [+]Create menu model and put dummy database
+     [+]-connect to mongo db
+     [+]-use connect-mongo db
+     [+]-use connect-mongo for session 
+     [+]-dependancies 
+     [+]-mongoose ,express-session, connect-mongo, dotenv
+     [+]-axios to sen ajax
+     [+]-install notification library npm i noty
+[+]Create login page with route
+[+]Create register page with route
+[.] Build register crud
+    -depenfancies express-flash express-session dotenv
     -status code article http://www.restapitutorial.com/httpstatuscodes.html
+[.]Build login using passport
+    -install dependancies passport-local express-session
+[.]create order controller and link it in server.js
+[.]create orders view  with table  for customer  and admin
+[.]create order single page  with status
+[.]Make order  on carts page
+[.]place order  functionality
+[.]order tracker 
+    -dependancy moment
+[.]socket  connection 
+    -dependancy socket.io
+
     database connection . dependancy mongoose
 build login using passport
     -install dependancy passport passport-local express-session
@@ -34,10 +52,5 @@ fetch all pizza from db and show on home page
 add to cart  functionality
     -use connect-mongo for session store
     -axios to send ajax request
-    install notification  library npm i noty   http://ned.im/noty/#/
-make order  on carts page 
-place order  functionality
-order tracker 
-    -dependancy moment
-socket  connection 
-    -dependancy socket.io
+    install notification  library npm i noty   http://ned.im/noty/#/ 
+
