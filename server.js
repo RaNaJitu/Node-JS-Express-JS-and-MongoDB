@@ -1,4 +1,5 @@
 require('dotenv').config(); //~? this is use for .env files has to access here
+const session = require('express-session'); //~# import the express-session package
 const express = require('express')
 const app = express();
 //const connectDB = require('../Real-Time-Pizza/app/config/db')
@@ -7,10 +8,10 @@ const path = require('path')  //? HERE WE ARE USE PATH NPM
 const expressLayout = require('express-ejs-layouts') //!import the express-ejs-layouts
 const PORT = process.env.PORT || 8880  //? it is checking 3000 port is assign or not 
 const mongoose = require('mongoose') //~% import the MONGOOES
-const session = require('express-session'); //~# import the express-session package
 const flash = require('express-flash') //~^ import the express-flash
 //const { MongoStore } = require('connect-mongo');
 const MongoDbStore = require('connect-mongo')(session);//* this is use for store the session in database
+const passport = require('passport')
 
 //~* DATABASE CONNECTION
 //#                             || pizza is a DATABASE name
@@ -53,7 +54,7 @@ process.on('SIGINT', function() {
     }); 
   }); 
 
-  //~* Session store 
+  //~* Session store in database
 
   let mongoStore = new MongoDbStore({
     mongooseConnection:connection,
@@ -72,18 +73,27 @@ app.use(session({
   cookie:{maxAge:1000*60*60*24}  //^ 24 hrs 
   //cookie:{maxAge:1000*15}  //^ 15 sec 
 })); //> here we are using the session with express
+
+//~# passport config
+const passportInit = require('./app/config/passport')
+passportInit(passport);
+app.use(passport.initialize())
+app.use(passport.session())
+
 //~% here we are use the express flash
 app.use(flash());
 
 //!how store the session in the database use connect-mango package
 //~# Assets
 app.use(express.static('Public'))
-
+//>by default express don't now which formate data is coming
+app.use(express.urlencoded({extended:false})) //# we are defining data formate is come in the form of urlencoded
 app.use(express.json()) //^ enable the json data what ever data come in json form
 
 //~> Global Middleware
 app.use((req,res, next)=>{
-    res.locals.session = req.session   //! this for getting the session values
+    res.locals.session = req.session;   //! this for getting the session values in view pages
+    res.locals.user = req.user;
     next();
 })
 
