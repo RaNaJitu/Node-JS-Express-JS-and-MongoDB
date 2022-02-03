@@ -34,24 +34,16 @@
     -status code article http://www.restapitutorial.com/httpstatuscodes.html
 [+]Build login using passport
     -install dependencies passport-local express-session
-[.]create order controller and link it in server.js
-[.]create orders view  with table  for customer  and admin
+[+]create order controller and link it in server.js
+[+]create orders view  with table  for customer  and admin
+[+]place order  functionality
+[+] show all my orders on customer orders page
+[+] show order on admin order page
 [.]create order single page  with status
-[.]Make order  on carts page
-[.]place order  functionality
 [.]order tracker 
     -dependency moment
 [.]socket  connection 
     -dependency socket.io
-
-
-    database connection . dependency mongoose
-build login using passport
-    -install dependency passport passport-local express-session
-create new model and put dummy database
-fetch all pizza from db and show on home page 
-add to cart  functionality
-    -use connect-mongo for session store
-    -axios to send ajax request
-    install notification  library npm i noty   http://ned.im/noty/#/ 
+[.] Build Project for deployment
+[.] deploy project on live server   
 

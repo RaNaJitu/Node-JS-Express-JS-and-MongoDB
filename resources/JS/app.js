@@ -1,6 +1,7 @@
 //console.log('my name is jitu')
 import axios from 'axios' //^ this import from nude_modules folder
 import Noty from 'noty'  //!this is for notification status 
+import { initAdmin } from './admin'  //here we  are import the admin.js files
 let addToCart = document.querySelectorAll('.add-to-cart')  //>  addToCart in this variable data come in the form of array type
 let cartCounter = document.querySelector('#cartCounter')  //count addToCart
 const updateToCart = (pizza)=>{
@@ -45,3 +46,5 @@ if(alertMsg){
         alertMsg.remove();
     }, 2000)
 }
+
+initAdmin(); //here we are calling this function because we want all code from admin.js 

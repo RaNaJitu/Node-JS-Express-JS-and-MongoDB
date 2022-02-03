@@ -3,6 +3,12 @@ const bcrypt = require('bcrypt');    //# importing the bcrypt library
 const passport = require('passport');
 //~^ Here we are written logic of the project
 const authController = ()=>{
+    
+    const _getRedirectUrl = (req)=>{
+        return req.user.role ==='admin' ? '/admin/orders' : '/customer/orders'
+    }
+
+
     return{
         login(req, res) {
             res.render('auth/login.ejs');
@@ -28,7 +34,8 @@ const authController = ()=>{
                         req.flash('error', info.message)
                     return next(err)
                     }
-                    return res.redirect('/')
+
+                    return res.redirect(_getRedirectUrl(req))
                 })
             })(req, res, next)
         },
