@@ -1,9 +1,9 @@
 [+] create directory structure
-[+]create a NPM (yarn)project and install all dependancy
-    -dependancy
+[+]create a NPM (yarn)project and install all dependency
+    -dependency
         -express
         - ejs express-ejs-layouts
-    -Dev dependancy
+    -Dev dependency
         -nodemon
 [+]create express server - create a server.js file
 [+] Git setup and first commit
@@ -29,25 +29,25 @@
      [+]-install notification library npm i noty
 [+]Create login page with route
 [+]Create register page with route
-[.] Build register crud
-    -depenfancies express-flash express-session dotenv
+[+] Build register crud
+    -dependencies express-flash express-session dotenv
     -status code article http://www.restapitutorial.com/httpstatuscodes.html
-[.]Build login using passport
-    -install dependancies passport-local express-session
+[+]Build login using passport
+    -install dependencies passport-local express-session
 [.]create order controller and link it in server.js
 [.]create orders view  with table  for customer  and admin
 [.]create order single page  with status
 [.]Make order  on carts page
 [.]place order  functionality
 [.]order tracker 
-    -dependancy moment
+    -dependency moment
 [.]socket  connection 
-    -dependancy socket.io
+    -dependency socket.io
 
 
-    database connection . dependancy mongoose
+    database connection . dependency mongoose
 build login using passport
-    -install dependancy passport passport-local express-session
+    -install dependency passport passport-local express-session
 create new model and put dummy database
 fetch all pizza from db and show on home page 
 add to cart  functionality

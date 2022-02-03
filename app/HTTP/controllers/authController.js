@@ -8,6 +8,12 @@ const authController = ()=>{
             res.render('auth/login.ejs');
         },
         postLogin(req, res, next){
+            const {email, password} = req.body
+            //^ Validate request
+            if(!email ||!password){
+                req.flash('error', 'All Field ae required')  //* this is for sending the error messages to views using flash library
+                return res.redirect('/login')
+            }
             passport.authenticate('local', (err, user, info)=>{
                 if(err){
                     req.flash('error', info.message)
@@ -71,7 +77,7 @@ const authController = ()=>{
                 return res.redirect('/register')
             })
             console.log(req.body)
-        },
+        }, 
         logout(req, res){
             req.logout();
             return res.redirect('/login')
