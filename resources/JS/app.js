@@ -5,7 +5,7 @@ import { initAdmin } from './admin'  //here we  are import the admin.js files
 let addToCart = document.querySelectorAll('.add-to-cart')  //>  addToCart in this variable data come in the form of array type
 let cartCounter = document.querySelector('#cartCounter')  //count addToCart
 const updateToCart = (pizza)=>{
-    //!here we are doing send the request to server then clicked pizza add to the cart
+    //! here we are doing send the request to server then clicked pizza add to the cart
     //! so we are use axios package to add the cart 
     axios.post('/update-cart',pizza).then((res)=>{
         console.log(res);

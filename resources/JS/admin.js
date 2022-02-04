@@ -28,6 +28,8 @@ const initAdmin = ()=>{
             `
         }).join('')
     }
+
+    //# this function for generate html pages 
     const generateMarkup = (order)=>{
         return orders.map(order => {
             return `
@@ -84,4 +86,4 @@ const initAdmin = ()=>{
 }
 
 module.exports = initAdmin;
-// export default initAdmin
+//export default initAdmin

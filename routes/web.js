@@ -9,6 +9,9 @@ const AdminOrderController = require('../app/HTTP/controllers/admin/orderControl
 const guest = require('../app/HTTP/middlewares/guest')
 const auth = require('../app/HTTP/middlewares/auth')
 const admin = require('../app/HTTP/middlewares/admin')
+
+
+
 const initRoutes = (app)=> {
     // app.get('/',(req, res)=>{
     //     res.render('home');

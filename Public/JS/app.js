@@ -2193,7 +2193,8 @@ var initAdmin = function initAdmin() {
     return parsedItems.map(function (menuItem) {
       return "\n                <p> ".concat(menuItem.items.name, " - ").concat(menuItem.qty, "pcs </p>\n            ");
     }).join('');
-  };
+  }; //# this function for generate html pages 
+
 
   var generateMarkup = function generateMarkup(order) {
     return orders.map(function (order) {
@@ -2202,7 +2203,7 @@ var initAdmin = function initAdmin() {
   };
 };
 
-module.exports = initAdmin; // export default initAdmin
+module.exports = initAdmin; //export default initAdmin
 
 /***/ }),
 
@@ -2231,7 +2232,7 @@ var addToCart = document.querySelectorAll('.add-to-cart'); //>  addToCart in thi
 var cartCounter = document.querySelector('#cartCounter'); //count addToCart
 
 var updateToCart = function updateToCart(pizza) {
-  //!here we are doing send the request to server then clicked pizza add to the cart
+  //! here we are doing send the request to server then clicked pizza add to the cart
   //! so we are use axios package to add the cart 
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {
     console.log(res);
